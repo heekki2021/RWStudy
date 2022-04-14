@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-bottom: 100px;
+      }
+      .container {
+        width: 1000px;
+        height: 386px;
+        border: 1px solid red;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .box1,
+      .box2,
+      .box3 {
+        width: 200px;
+        height: 300px;
+        background-color: beige;
+        padding: 40px;
+      }
+
+      .box1 {
+        text-align: center;
+        border: 3px solid red;
+      }
+      .box2 {
+        text-align: center;
+        border: 3px solid green;
+      }
+      .box3 {
+        border: 3px solid blue;
+      }
+      #red {
+        color: red;
+      }
+      #yellow {
+        color: yellow;
+      }
+      #green {
+        color: green;
+      }
+      #blue {
+        color: blue;
+      }
+      #purple {
+        color: purple;
+      }
+      #black {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>하노이의 탑</p>
+    <button onclick="buttonClick()">초기화</button>
+    <div class="container">
+      <div class="box1">
+        <p id="red"></p>
+        <p id="yellow"></p>
+        <p id="green"></p>
+        <p id="blue"></p>
+        <p id="purple"></p>
+        <p id="black"></p>
+      </div>
+      <div class="box2">second</div>
+      <div class="box3"></div>
+    </div>
+    <script>
+      function buttonClick() {
+        document.getElementById("black").innerHTML = "◼";
+        document.getElementById("purple").innerHTML = "◼︎◼︎◼︎";
+        document.getElementById("blue").innerHTML = "◼︎◼︎◼︎◼︎◼︎";
+        document.getElementById("green").innerHTML = "◼︎◼︎◼︎◼︎◼︎◼︎◼︎";
+        document.getElementById("yellow").innerHTML = "◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎";
+        document.getElementById("red").innerHTML = "◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎";
+      }
+    </script>
+  </body>
+</html>
