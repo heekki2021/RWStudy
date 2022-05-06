@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* #debug_out{
+            
+            width: 460px;
+            height: 620px; 
+            border: 1px solid red;
+               cursor:pointer;
+
+        } */
+
+      #game {
+        background-color: pink;
+      }
+
+      #clearButton {
+        position: absolute;
+        top: 50px;
+        left: 600px;
+      }
+      #colorChange {
+        position: absolute;
+        top: 80px;
+        left: 600px;
+      }
+      #result {
+        position: absolute;
+        top: 110px;
+        left: 600px;
+        width: 50px;
+        height: 20px;
+      }
+      #shapeButton {
+        position: absolute;
+        top: 140px;
+        left: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      onclick="action_coords(event)"
+      id="game"
+      width="460"
+      height="620"
+    ></canvas>
+    <script src="maingame.js"></script>
+    <!-- <div id="debug_out" onclick="action_coords(event)">debug out</div> -->
+
+    <button id="clearButton" onclick="clear()">Clear</button>
+    <input id="colorChange" onchange="changeColor()" />
+
+    <!-- <button id="shapeButton" onclick="foam">shapeChange</button> -->
+    <input
+      id="shapeButton"
+      type="Button"
+      value="circle"
+      onclick="shapeChange()"
+    />
+    <div id="result"></div>
+  </body>
+</html>
