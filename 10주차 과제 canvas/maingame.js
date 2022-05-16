@@ -34,13 +34,22 @@ class bullet {
   }
 }
 
-canvas.onclick = function (event, changeColor) {
+canvas.onclick = function (event) {
   const x = event.clientX - context.canvas.offsetLeft;
   const y = event.clientY - context.canvas.offsetTop;
 
-  changeColor;
-  //   context.beginPath();
-  context.fillRect(x - 15, y - 15, 30, 30);
+  // context.arc(x - 15, y - 15, 30, 0, 2 * Math.PI);
+  // context.arc(x - 50, y - 50, 60, 0, 2 * Math.PI);
+
+  context.beginPath();
+  context.rect(x - 15, y - 15, 30, 30);
+  context.stroke();
+
+  context.beginPath();
+
+  context.rect(x - 50, y - 50, 30, 30);
+
+  context.stroke();
   //   context.fill();
 };
 
@@ -71,6 +80,8 @@ char_player.draw();
 var char_bullet = new bullet(200, 200, 50, 70, "white");
 char_bullet.draw();
 
+context.rect(15, 15, 40, 40);
+context.rect(50, 50, 40, 40);
 // function action_coords(event) {
 //   var x1 = event.offsetX;
 //   var y1 = event.offsetY;

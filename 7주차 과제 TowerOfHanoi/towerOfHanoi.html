@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       button {
         margin-bottom: 100px;
       }
       .container {
         width: 1000px;
-        height: 386px;
+        height: 380px;
         border: 1px solid red;
         margin: 0 auto;
         display: flex;
@@ -19,25 +25,24 @@
         justify-content: space-evenly;
       }
 
-      .box1,
-      .box2,
-      .box3 {
-        width: 200px;
-        height: 300px;
+      #box1,
+      #box2,
+      #box3 {
+        width: 300px;
+        height: 378px;
         background-color: beige;
         padding: 40px;
+        border: 3px solid gray;
+        text-align: center;
       }
 
-      .box1 {
-        text-align: center;
-        border: 3px solid red;
+      #box1 {
       }
-      .box2 {
-        text-align: center;
-        border: 3px solid green;
+
+      #box2 {
       }
-      .box3 {
-        border: 3px solid blue;
+
+      #box3 {
       }
       #red {
         color: red;
@@ -63,7 +68,7 @@
     <p>하노이의 탑</p>
     <button onclick="buttonClick()">초기화</button>
     <div class="container">
-      <div class="box1">
+      <div id="box1" onclick="box1Selected()">
         <p id="red"></p>
         <p id="yellow"></p>
         <p id="green"></p>
@@ -71,18 +76,12 @@
         <p id="purple"></p>
         <p id="black"></p>
       </div>
-      <div class="box2">second</div>
-      <div class="box3"></div>
+
+      <div id="box2" onclick="box2Selected()"></div>
+
+      <div id="box3" onclick="box3Selected()"></div>
     </div>
-    <script>
-      function buttonClick() {
-        document.getElementById("black").innerHTML = "◼";
-        document.getElementById("purple").innerHTML = "◼︎◼︎◼︎";
-        document.getElementById("blue").innerHTML = "◼︎◼︎◼︎◼︎◼︎";
-        document.getElementById("green").innerHTML = "◼︎◼︎◼︎◼︎◼︎◼︎◼︎";
-        document.getElementById("yellow").innerHTML = "◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎";
-        document.getElementById("red").innerHTML = "◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎";
-      }
-    </script>
+
+    <script src="logic.js"></script>
   </body>
 </html>
